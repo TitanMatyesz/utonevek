@@ -1,29 +1,43 @@
-class Utonevek:
-    def __init__(self,utonev,elso,masodik,ujsz_1,ujsz_2,nem):
-        self.utonev = utonev
+class Utonev:
+    def __init__(self, nev, elso, masodik, uj1, uj2, nem):
+        self.nev = nev
         self.elso = elso
         self.masodik = masodik
-        self.ujsz_1 = ujsz_1
-        self.ujsz_2 = ujsz_2
+        self.uj1 = uj1
+        self.uj2 = uj2
         self.nem = nem
-    
+
     def __str__(self):
-        return f"Utónév: {self.utonev}, neme: {self.nem}"
-    
-f = open("utonev.txt", "rt", encoding="ANSI")
+        return f"Utónév: {self.nev}, neme: {self.nem}"
+
+db = 0
+utonevek = []
+f = open("utonev.txt", "rt", encoding="ansi")
 f.readline()
 
-utonevek = []
 for sor in f:
-    tmp = sor.strip().split(";")
-    utonevek.append(Utonevek(tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5]))
+    sor = sor.strip().split(';')
+    print(sor)
+    utonevek.append(Utonev(sor[0], sor[1], sor[2], sor[3], sor[4], sor[5]))
+    db += 1
 
-for nev in utonevek:
-    print(nev)
+for utonev in utonevek:
+    print(utonev)
 
+ffo = 0
+for ferfi in utonevek:
+    if ferfi.nem == 'F':
+        if ferfi.elso != '':
+            ffo += int(ferfi.elso)
+print(f"{ffo} férfi volt")
 
-ferfi = 0
-for nev in utonevek:
-    if tmp[1] == "F":
-        ferfi + 1
-print(f"{ferfi} darab férfi van")
+nfo = 0
+for no in utonevek:
+    if no.nem == 'N':
+        if no.elso != '':
+            nfo += int(no.elso)
+print(f"{nfo} nő volt")
+
+print(f"{ffo + nfo} volt a népesség száma")
+
+print(f"{db} utónévről van adat")
