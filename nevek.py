@@ -1,4 +1,4 @@
-f = open("Utonev.txt", "rt", encoding="Ansi")
+f = open("utonev.txt", "rt", encoding="ANSI")
 
 class Utonevek:
     def __init__(self,utonev,elso,masodik,ujsz_1,ujsz_2,nem):
@@ -7,10 +7,10 @@ class Utonevek:
         self.masodik = masodik
         self.ujsz_1 = ujsz_1
         self.ujsz_2 = ujsz_2
-        nem = nem
+        self.nem = nem
     
     def __str__(self):
-        return f"asdfsd"
+        return f"{self.utonev},{self.elso},{self.masodik},{self.ujsz_1},{self.ujsz_2},{self.nem}"
 
 nevek = []
 for sor in f:
