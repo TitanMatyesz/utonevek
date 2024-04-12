@@ -12,10 +12,8 @@ class Utonevek:
     
 f = open("utonev.txt", "rt", encoding="ANSI")
 f.readline()
-nevek = []
+
+utonevek = []
 for sor in f:
     tmp = sor.strip().split(";")
-    nevek.append(Utonevek(tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],))
-
-for adat in nevek:
-    print(adat)
+    utonevek.append(Utonevek(tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5]))
