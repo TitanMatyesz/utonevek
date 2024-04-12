@@ -1,5 +1,3 @@
-f = open("utonev.txt", "rt", encoding="ANSI")
-
 class Utonevek:
     def __init__(self,utonev,elso,masodik,ujsz_1,ujsz_2,nem):
         self.utonev = utonev
@@ -11,7 +9,9 @@ class Utonevek:
     
     def __str__(self):
         return f"{self.utonev},{self.elso},{self.masodik},{self.ujsz_1},{self.ujsz_2},{self.nem}"
-
+    
+f = open("utonev.txt", "rt", encoding="ANSI")
+f.readline()
 nevek = []
 for sor in f:
     tmp = sor.strip().split(";")
