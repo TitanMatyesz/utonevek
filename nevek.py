@@ -8,7 +8,7 @@ class Utonevek:
         self.nem = nem
     
     def __str__(self):
-        return f"{self.utonev},{self.elso},{self.masodik},{self.ujsz_1},{self.ujsz_2},{self.nem}"
+        return f"Utónév: {self.utonev}, neme: {self.nem}"
     
 f = open("utonev.txt", "rt", encoding="ANSI")
 f.readline()
@@ -17,3 +17,6 @@ utonevek = []
 for sor in f:
     tmp = sor.strip().split(";")
     utonevek.append(Utonevek(tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5]))
+
+for nev in utonevek:
+    print(nev)
