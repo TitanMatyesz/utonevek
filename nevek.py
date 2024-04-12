@@ -20,3 +20,11 @@ for sor in f:
 
 for nev in utonevek:
     print(nev)
+
+'''
+ferfi = 0
+for nev in utonevek:
+    if tmp[1] == "F":
+        ferfi + 1
+        print(ferfi)
+        '''
