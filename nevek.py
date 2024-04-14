@@ -1,3 +1,4 @@
+#osztaly
 class Utonev:
     def __init__(self, nev, elso, masodik, uj1, uj2, nem):
         self.nev = nev
@@ -10,6 +11,7 @@ class Utonev:
     def __str__(self):
         return f"Utónév: {self.nev}, neme: {self.nem}"
 
+#beolvasas
 db = 0
 utonevek = []
 f = open("utonev.txt", "rt", encoding="ansi")
@@ -21,9 +23,11 @@ for sor in f:
     utonevek.append(Utonev(sor[0], sor[1], sor[2], sor[3], sor[4], sor[5]))
     db += 1
 
+#adatok kiirasa
 for utonev in utonevek:
     print(utonev)
 
+#ferfiak szama
 ffo = 0
 for ferfi in utonevek:
     if ferfi.nem == 'F':
@@ -31,6 +35,7 @@ for ferfi in utonevek:
             ffo += int(ferfi.elso)
 print(f"{ffo} férfi volt")
 
+#nok szama
 nfo = 0
 for no in utonevek:
     if no.nem == 'N':
@@ -38,6 +43,8 @@ for no in utonevek:
             nfo += int(no.elso)
 print(f"{nfo} nő volt")
 
-print(f"{ffo + nfo} volt a népesség száma")
 
+print(f"{ffo + nfo} volt a népesség száma")
 print(f"{db} utónévről van adat")
+
+#hazi
