@@ -43,8 +43,18 @@ for no in utonevek:
             nfo += int(no.elso)
 print(f"{nfo} nő volt")
 
-
 print(f"{ffo + nfo} volt a népesség száma")
-print(f"{db} utónévről van adat")
+print(f"{db} utónévről van adat") 
 
-#hazi
+#ujszuletett fiuk
+ujfi = 0
+for fiu in utonevek:
+    if fiu.nem == 'F':
+        if fiu.uj1 != '':
+            ujfi += int(fiu.uj1)
+ujfi2 = 0
+for fiu2 in utonevek:
+    if fiu2.nem == 'F':
+        if fiu2.uj2 != '':
+            ujfi2 += int(fiu.uj2)
+print(f"{ujfi + ujfi2} újszülött fiú volt")
