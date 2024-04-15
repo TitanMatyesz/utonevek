@@ -58,3 +58,16 @@ for fiu2 in utonevek:
         if fiu2.uj2 != '':
             ujfi2 += int(fiu.uj2)
 print(f"{ujfi + ujfi2} újszülött fiú volt")
+
+#ujszulott lanyok
+ujla = 0
+for lany in utonevek:
+    if lany.nem == 'N':
+        if lany.uj1 != '':
+            ujla += int(lany.uj1)
+ujla2 = 0
+for lany2 in utonevek:
+    if lany2.nem == 'N':
+        if lany2.uj2 != '':
+            ujla2 += int(lany.uj2)
+print(f"{ujla + ujla2} újszülött lány volt")
